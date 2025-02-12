@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="shoppingStoreApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Laptop Store</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="productController.js"></script>
+    <script src="authController.js"></script>
+</head>
+<body>
+
+    <div class="container" ng-controller="AuthController as authCtrl">
+        <!-- Login Page -->
+        <div ng-if="!authCtrl.isLoggedIn()">
+            <h1>Login</h1>
+            <form ng-submit="authCtrl.login()">
+                <label>Username:</label>
+                <input type="text" ng-model="authCtrl.username" required>
+                <label>Password:</label>
+                <input type="password" ng-model="authCtrl.password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p ng-if="authCtrl.loginError" class="error">Invalid credentials!</p>
+        </div>
+
+        <!-- Main Store Page -->
+        <div ng-if="authCtrl.isLoggedIn()">
+            <h1>Welcome to the Online Laptop Store, {{authCtrl.username}}</h1>
+            <button ng-click="authCtrl.logout()">Logout</button>
+            
+            <div ng-controller="ProductController as prodCtrl">
+                <h2>Laptops for Sale</h2>
+
+                <div class="products">
+                    <div class="product" ng-repeat="product in prodCtrl.products">
+                        <img ng-src="{{product.image}}" alt="{{product.name}}">
+                        <h3>{{product.name}}</h3>
+                        <p>{{product.description}}</p>
+                        <p>{{product.price | currency}}</p>
+                        <button ng-click="prodCtrl.addToCart(product)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="cart">
+                    <h2>Your Cart</h2>
+                    <div ng-repeat="item in prodCtrl.cart">
+                        <p>{{item.name}} - {{item.quantity}} x {{item.price | currency}} 
+                            <button ng-click="prodCtrl.removeFromCart(item)">Remove</button>
+                        </p>
+                    </div>
+                    <p>Total: {{prodCtrl.getTotal() | currency}}</p>
+                    <button ng-click="prodCtrl.clearCart()">Clear Cart</button>
+                    <button ng-click="prodCtrl.checkout()">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

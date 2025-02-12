@@ -1,0 +1,31 @@
+
+<html>
+<head>
+    <title>Shub'z Store</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="module/app.js"></script>
+    <script src="controller/product.controller.js"></script>
+    <script src="controller/auth.controller.js"></script>
+    <script SRC="controller/login.controller.js"></script> 
+</head>
+<body  ng-controller="AuthController">
+    <div ng-app="DTCS">
+    <script>
+        if (!localStorage.getItem("loggedInUser")) {
+            window.location.href = "login.html"; 
+        }
+    </script>
+    <h1>Product List</h1>
+    <button ng-click="logout()" style="background: red; color: white; padding: 8px 15px; border: none; cursor: pointer;">Logout</button>
+    <div ng-controller="ProductController">
+        <div ng-repeat="product in products">
+            <h3>{{ product.name }}</h3>
+            <img ng-src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="150">
+            <p>Price: ₹{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

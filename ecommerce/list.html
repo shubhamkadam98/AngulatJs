@@ -1,0 +1,25 @@
+
+<html>
+<head>
+    
+    <title>TFL Store - Product List</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="module/app.js"></script>
+    <script src="controller/product.controller.js"></script>
+</head>
+<body >
+    <div ng-app="DTCS">
+    <div ng-controller="ProductController">
+        <h1>Product List</h1>
+        <div ng-repeat="product in products">
+            <h3>{{ product.name }}</h3>
+            <img ng-src="assets/images/{{ product.image }}" alt="{{ product.name }}" width="150">
+            <p>Price: ₹{{ product.price }}</p>
+            <p>{{ product.description }}</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
