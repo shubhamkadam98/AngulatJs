@@ -1,2 +1,2 @@
 
-var app = angular.module("authModule", "catlogModule");
+var app = angular.module('app', []);

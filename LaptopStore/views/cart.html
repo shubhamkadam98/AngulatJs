@@ -1,0 +1,7 @@
+<h1>Your Cart</h1>
+<div ng-repeat="laptop in ctrl.cart">
+  <div class="cart-item">
+    <h2>{{laptop.name}}</h2>
+    <button ng-click="ctrl.removeFromCart(laptop)">Remove</button>
+  </div>
+</div>

@@ -1,0 +1,22 @@
+{
+  "name": "laptopstore",
+  "version": "1.0.0",
+  "description": "Online Laptop Store",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "AngularJs"
+  },
+  "author": "Shubham kadam",
+  "license": "ISC",
+  "dependencies": {
+    "@types/angular": "^1.8.9",
+    "angular": "^1.6.4",
+    "lite-server": "^2.6.1",
+    "typescript": "^5.7.3"
+  }
+}

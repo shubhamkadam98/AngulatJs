@@ -1,0 +1,9 @@
+<h1>Welcome to Laptop Store</h1>
+<div ng-repeat="laptop in ctrl.laptops">
+  <div class="laptop-card">
+    <img ng-src="images/{{laptop.image}}" alt="{{laptop.name}}">
+    <h2>{{laptop.name}}</h2>
+    <p>{{laptop.description}}</p>
+    <button ng-click="ctrl.addToCart(laptop)">Add to Cart</button>
+  </div>
+</div>
