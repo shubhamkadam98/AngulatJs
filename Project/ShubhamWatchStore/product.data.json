@@ -1,0 +1,51 @@
+[
+    {
+        "id": "01",
+        "name": "Rolex Submariner",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 80000,
+        "imgSrc": "https://th.bing.com/th/id/OIP.h_E-hAdaGNNaHsfTDjcW3QHaIi?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": "02",
+        "name": "Omega Seamaster",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 75000,
+        "imgSrc": "https://th.bing.com/th/id/OIP.lNFsQhzsS75rQBl-nM6PxAHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": "03",
+        "name": "Tag Heuer Monaco",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 55000,
+        "imgSrc": "https://th.bing.com/th/id/R.b3670a781c74272430c1640f4f396f89?rik=sOyXXGXYZ8cTIw&riu=http%3a%2f%2fwww.thejewelleryeditor.com%2fmedia%2fimages_thumbnails%2ffiler_public_thumbnails%2fold%2f53486%2fIconic-Watches_TAG-Heuer-Monaco.jpg__1536x0_q75_crop-scale_subsampling-2_upscale-false.jpg&ehk=bkG%2bS7dOiLbkkCYmKPumvf6NVfhhqwDpiLSTDRvRDGE%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "id": "04",
+        "name": "Casio G-Shock",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 12000,
+        "imgSrc": "https://th.bing.com/th/id/R.27875faa3f28564583c6b0ab68f974b8?rik=M2Oyrtg35961SQ&riu=http%3a%2f%2fablogtowatch.com%2fwp-content%2fuploads%2f2019%2f03%2fCasio-G-Shock-MT-G-MGTB1000-6.jpg&ehk=PbihdjjXt%2b49i0mKo%2fgwUyjSQHV4oFXHOlsrc5oFlE8%3d&risl=&pid=ImgRaw&r=0"
+    },
+    {
+        "id": "05",
+        "name": "Seiko Presage",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 25000,
+        "imgSrc": "https://th.bing.com/th/id/OIP.MfjgbI7MV-WCpJAhRtjvHwHaFj?rs=1&pid=ImgDetMain"
+    },
+    {
+        "id": "06",
+        "name": "Audemars Piguet Royal Oak",
+        "type": "Accessories",
+        "subtype": "Watch",
+        "price": 120000,
+        "imgSrc": "https://th.bing.com/th/id/OIP.BQLBs6hAlnYFJ3UvxsSPSAHaJQ?rs=1&pid=ImgDetMain"
+    }
+]
+
