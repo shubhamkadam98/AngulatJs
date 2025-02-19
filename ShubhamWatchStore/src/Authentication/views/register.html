@@ -1,0 +1,153 @@
+
+ <div class="register-container" ng-controller="AuthController as vm">
+    <div class="register-left">
+        <h2>Register</h2>
+        <p>Get access to exclusive deals, orders, and more.</p>
+        <img class="register-image" src="https://img.freepik.com/premium-vector/register-now-label-badge-registration_349999-1467.jpg" alt="Register Now">
+    </div>
+
+    <div class="register-right">
+        <form ng-submit="vm.register()">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" class="input-field" ng-model="vm.user.name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" class="input-field" ng-model="vm.user.email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" class="input-field" ng-model="vm.user.password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile</label>
+                <input type="text" id="mobile" class="input-field" ng-model="vm.user.mobile" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address</label>
+                <input type="text" id="address" class="input-field" ng-model="vm.user.address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" class="input-field" ng-model="vm.user.country" required>
+            </div>
+
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+
+        <p class="error-message-register">{{ vm.message }}</p>
+
+        <p class="login-link">Already have an account? <a href="#!/login">Login</a></p>
+    </div>
+</div>
+
+<!-- Inline Styles for Extraordinay UI -->
+<style>
+    .register-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 50px auto;
+        max-width: 1100px;
+    }
+
+    .register-left {
+        width: 40%;
+        padding: 20px;
+        background-color: #f5f5f5;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .register-left h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .register-left p {
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    .register-image {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .register-right {
+        width: 55%;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    label {
+        font-size: 1.1rem;
+        color: #333;
+    }
+
+    .input-field {
+        width: 100%;
+        padding: 12px;
+        margin-top: 8px;
+        border-radius: 8px;
+        border: 1px solid #ddd;
+        font-size: 1rem;
+    }
+
+    .input-field:focus {
+        outline: none;
+        border-color: #007bff;
+    }
+
+    .register-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .register-btn:hover {
+        background-color: #0056b3;
+    }
+
+    .error-message-register {
+        color: #ff4d4d;
+        font-size: 1rem;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .login-link {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .login-link a {
+        color: #007bff;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+</style>

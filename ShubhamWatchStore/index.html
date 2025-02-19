@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubham_Watch_Store</title>
+
+    
+ 
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <!-- Bootstrap CSS for styling -->
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+ <!-- A custom CSS file -->
+ <link rel="stylesheet" href="../EcommerseWebNewProj/assets/style.css">
+
+
+    <!-- AngularJS framework for building the app. -->
+    <script src="./angular.min.js"></script>
+    <!-- Enables routing (switching views without page reload). -->
+    <script src="./angular-route.min.js"></script>
+    <!-- Defines the main module (ecomApp). -->
+    <script src="./dist/app.module.js"></script>
+    <!-- Configures routes (URL-based navigation).  -->
+    <script src="./dist/app.routes.js"></script>
+   
+    <!-- Defines authentication services (login/logout logic). -->
+    <script src="./dist/Authentication/servises/auth.servises.js"></script>
+    <!-- Controls the login/signup behavior. -->
+    <script src="./dist/Authentication/controller/auth.controller.js"></script>
+    <!-- Manages product-related logic (displaying watches, filtering). -->
+    <script src="./dist/Prodct-catlog/controller/product.controller.js"></script>
+    <!-- Handles API calls for fetching product data. -->
+    <script src="./dist/Prodct-catlog/servises/product.service.js"></script>
+    <!-- Manages orders (cart, checkout, payment processing, etc.). -->
+    <script src="./dist/Orders/controller/order.controller.js"></script>
+    
+
+  
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<!-- ng-app="ecomApp": Declares that the webpage is controlled by the ecomApp AngularJS module.
+ng-controller="ProductController as vm": Uses the ProductController to handle product-related data. -->
+<body ng-app="ecomApp" ng-controller="ProductController as vm">
+    <!-- ng-include="'src/Views/header.html'": Includes the header (navigation bar, logo, etc.). -->
+    <div ng-include="'src/Views/header.html'"></div>  
+    <!-- ng-view Displays different pages dynamically using AngularJS routing -->
+    <div ng-view></div>
+    <!-- ng-include="'src/Views/footer.html'": Includes the footer (contact info, social media links, etc.). -->
+    <div ng-include="'src/Views/footer.html'"></div>  
+</body>
+
+</html>
+

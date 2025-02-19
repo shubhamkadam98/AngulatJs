@@ -1,0 +1,36 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <a style="margin-left: 650px;" class="navbar-brand text-white font-weight-bold" href="#">Shub'z Watch Store</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link text-white" href="#!/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#!/products">Products</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="#!/about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a href="#!/cart" class="btn btn-light my-2 my-sm-0">
+                    Cart ({{ vm.cart.length }})
+                </a>
+            </li>
+            <li class="nav-item">
+                <button class="btn btn-danger ml-2" ng-click="vm.logout()">Logout</button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Include Bootstrap JS and Popper.js for mobile responsive behavior -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
